@@ -22,7 +22,7 @@ if df_vlsfo is not None and not df_vlsfo.empty:
     df_brent = get_ticker_history(
         ticker_symbol='BZ=F',
         data_inicial=oldest_update,
-        data_final=latest_update
+        data_final=None
     )
     if df_brent is not None:
         df_brent.index = pd.to_datetime(df_brent.index).tz_localize(None).normalize()
